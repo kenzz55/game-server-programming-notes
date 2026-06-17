@@ -37,7 +37,7 @@
 | Heap | 동적 할당 메모리 | 공유 |
 | Stack | 함수 호출 정보, 지역 변수 일부, 복귀 주소 | 스레드마다 별도 |
 
-![프로세스와 스레드 메모리 구조](./ch01_images/process_thread_memory.png)
+![프로세스와 스레드 메모리 구조](./images/ch01_images/process_thread_memory.png)
 
 핵심은 **힙과 전역 데이터는 같은 프로세스의 모든 스레드가 공유하지만, 스택은 스레드마다 따로 가진다**는 점이다. 함수 호출이 끝난 뒤 caller의 실행 지점으로 돌아갈 수 있는 이유는 호출 정보가 stack frame에 저장되기 때문이다. 스레드마다 호출 흐름이 다르므로 각 스레드는 자기 call stack을 가진다.
 
@@ -129,7 +129,7 @@ int main()
 
 운영체제는 time slice 또는 quantum 단위로 CPU를 나누어 여러 스레드가 번갈아 실행되는 것처럼 보이게 한다.
 
-![Context Switch 타임라인](./ch01_images/context_switch_timeline.png)
+![Context Switch 타임라인](./images/ch01_images/context_switch_timeline.png)
 
 **Context switch**는 실행 중이던 스레드의 CPU 문맥을 저장하고, 다음 스레드의 문맥을 복원하는 과정이다. 여기에는 레지스터, 스택 포인터, 명령어 포인터, 스케줄링 상태 등이 관련된다. 그래서 context switch는 공짜가 아니다.
 
@@ -265,7 +265,7 @@ Windows의 **Critical Section object**는 mutex와 비슷하지만 같은 프로
 4. Thread B는 `mutexPlayer`를 기다린다.
 5. 둘 다 영원히 진행하지 못한다.
 
-![교착상태와 잠금 순서](./ch01_images/deadlock_lock_order.png)
+![교착상태와 잠금 순서](./images/ch01_images/deadlock_lock_order.png)
 
 게임 서버에서 교착상태가 발생하면 다음 증상이 나타날 수 있다.
 
@@ -588,7 +588,7 @@ struct PlayerState
 
 ## 14. 동기화 도구 선택 지도
 
-![동기화 도구 선택 지도](./ch01_images/sync_primitives_map.png)
+![동기화 도구 선택 지도](./images/ch01_images/sync_primitives_map.png)
 
 | 상황 | 우선 고려할 도구 |
 |---|---|
