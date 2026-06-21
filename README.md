@@ -54,11 +54,10 @@
 ├── ch03_socket_programming.md
 ├── ch04_game_server_and_client.md
 ├── ch05_game_networking.md
-├── ch06_proudnet.md
-├── ch07_database_basic.md
-├── ch08_nosql_basic.md
-├── ch09_distributed_server_architecture.md
-├── ch10_distributed_server_case_study.md
+├── ch06_database_basic.md
+├── ch07_nosql_basic.md
+├── ch08_distributed_server_architecture.md
+├── ch09_distributed_server_case_study.md
 └── images/
 ```
 
